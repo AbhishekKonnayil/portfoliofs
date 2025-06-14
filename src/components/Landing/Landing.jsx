@@ -120,7 +120,7 @@ function Landing() {
                     <div className='lcr--content sm:flex-col' style={{ color: theme.tertiary }}>
                         <h6>{headerData.title}</h6>
                         <h1>{headerData.name}</h1>
-                        <p className='sm:hidden'>{headerData.description}</p>
+                        <p>{headerData.description}</p>
 
                         <div className='lcr-buttonContainer'>
                             {headerData.resumePdf && (

@@ -1,3 +1,4 @@
+import React from 'react';
 import Box from '@mui/material/Box';
 import { motion } from 'framer-motion';
 import { useContext } from 'react';

@@ -1,11 +1,11 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-    content: [
-        "./index.html",
-        "./src/**/*.{js,jsx}",
-    ],
-    theme: {
-        extend: {},
-    },
-    plugins: [],
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}", // Scan all components for Tailwind classes
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
 }

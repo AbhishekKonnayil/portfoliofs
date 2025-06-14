@@ -1,3 +1,4 @@
+import React from "react";
 /* eslint-disable */
 import { BiShoppingBag, BiPencil } from "react-icons/bi";
 import { BsCodeSlash, BsClipboardData } from "react-icons/bs";

@@ -11,13 +11,13 @@ function Experience() {
 
     const { theme } = useContext(ThemeContext);
     return (
-        <div className="experience" id="experience" style={{backgroundColor: theme.secondary}}> 
-             <div className="experience-body">
-                 <div className="experience-image">
-                     <img src={theme.expimg} alt="" />
+        <div className="min-h-screen" id="experience" style={{backgroundColor: theme.secondary}}> 
+             <div className="flex flex-row items-center justify-center w-full">
+                 <div className="box-border p-4 flex-2/6 ml-[7%] mt-4 pointer-events-none">
+                     <img className='w-full pointer-events-auto' src={theme.expimg} alt="" />
                  </div>
-                 <div className="experience-description">
-                    <h1 style={{color:theme.primary}}>Experience</h1>
+                 <div className="w-full flex-8/12 p-8 flex flex-col items-end justify-center mr-8">
+                    <h1 className='text-6xl font-serif mb-8' style={{color:theme.primary}}>Experience</h1>
                     {experienceData.map(exp =>(
                         <ExperienceCard 
                             key={exp.id}

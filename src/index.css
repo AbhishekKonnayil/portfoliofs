@@ -14,6 +14,8 @@
     url("./assets/fonts/Bestermind/BestermindRegular.ttf") format("truetype");
 }
 
+@import "tailwindcss";
+
 * {
   margin: 0;
   box-sizing: border-box;
