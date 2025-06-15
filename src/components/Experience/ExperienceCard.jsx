@@ -18,10 +18,17 @@ export function ExperienceCard({ id, company, jobtitle, startYear, endYear }) {
     };
 
     return (
-        <motion.div whileHover={{ scale: 1.02 }}>
+        <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
+            viewport={{ once: true, amount: 0.2 }}
+            whileHover={{ scale: 1.02 }}
+
+        >
             <div
                 key={id}
-                className='flex flex-row items-start justify-items-start w-[90%] h-[140px] p-6 rounded-3xl mb-6 transition-colors ease-in-out'
+                className='flex flex-row gap-4 h-[140px] relative  justify-start w-full p-4 rounded-[20px] hover:shadow-lg max-w-full'
                 style={cardStyle}
                 onMouseEnter={(e) => {
                     e.currentTarget.style.backgroundColor = theme.primary50;
@@ -30,18 +37,23 @@ export function ExperienceCard({ id, company, jobtitle, startYear, endYear }) {
                     e.currentTarget.style.backgroundColor = theme.primary30;
                 }}
             >
-                <div className="rounded-[50%] w-[55px] h-[55px] flex items-center justify-center shrink-0" style={{ backgroundColor: theme.primary }}>
-                    <img className='w-[36px] pointer-events-none'
+                <div
+                    className="rounded-full  w-[55px] h-[55px] sm:w-[45px] sm:h-[45px] flex items-center justify-center  overflow-auto"
+                    style={{ backgroundColor: theme.primary }}
+                >
+                    <img
+                        className='w-[36px] sm:w-[30px] pointer-events-none '
                         src={theme.type === 'light' ? expImgBlack : expImgWhite}
                         alt="Experience"
                     />
                 </div>
-                <div className="ml-2.5">
-                    <h6 className="font-bold text-sm mb-2" style={{ color: theme.primary }}>
+
+                <div className="flex flex-col gap-y-4">
+                    <h6 className="text-sm font-bold" style={{ color: theme.primary }}>
                         {startYear}-{endYear}
                     </h6>
-                    <h4 className='text-lg font-semibold' style={{ color: theme.tertiary }}>{jobtitle}</h4>
-                    <h5 className='text-lg font-semibold' style={{ color: theme.tertiary80 }}>{company}</h5>
+                    <div> <h4 className=' text-[1.25rem] font-semibold sm:text-[1.125rem] leading-tight' style={{ color: theme.tertiary }}>{jobtitle}</h4>
+                        <h5 className='text-[1.1rem] font-medium sm:text-[1.05rem]' style={{ color: theme.tertiary80 }}>{company}</h5></div>
                 </div>
             </div>
         </motion.div>
