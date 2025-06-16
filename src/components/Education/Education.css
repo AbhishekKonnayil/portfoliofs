@@ -1,17 +1,17 @@
-.education {
+/* .education {
     min-height: 100vh;
-}
+} */
 
-.education-body {
+/* .education-body {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     width: 100%;
     color: hsla(117, 56%, 49%, 0.702);
-}
+} */
 
-.education-description {
+/* .education-description {
     width: 100%;
     flex: 0.65;
     padding: 2rem;
@@ -20,15 +20,15 @@
     align-items: flex-start;
     justify-content: center;
     margin-left: 7%;
-}
+} */
 
-.education-description > h1{
+/* .education-description > h1{
     font-size: 3.5rem;
     font-family: var(--primaryFont);
     margin-bottom: 2rem;
-}
+} */
 
-.education-card {
+/* .education-card {
     display: flex;
     flex-direction: row;
     align-items:flex-start;
@@ -38,10 +38,10 @@
     padding: 1.5rem;
     border-radius: 20px;
     margin-bottom: 1.5rem;
-    transition: background-color 200ms ease-in-out;
-}
+    transition: background-color 200ms ease-in-out; */
+/* } */
 
-.educard-img {
+/* .educard-img {
     border-radius: 50%;
     width: 55px;
     height: 55px;
@@ -49,17 +49,17 @@
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-}
+} */
 
-.educard-img > img {
+/* .educard-img > img {
     width: 40px;
-}
+} */
 
-.education-details{
+/* .education-details{
     margin-left: 0.6rem;
-}
+} */
 
-.education-details > h6 {
+/* .education-details > h6 {
     font-family: var(--primaryFont);
     font-size: 0.85rem;
     font-weight: 700;
@@ -76,23 +76,23 @@
     font-family: var(--primaryFont);
     font-size: 1.15rem;
     font-weight: 600;
-}
+} */
 
-.education-image {
+/* .education-image {
     box-sizing: border-box;
     padding: 1rem;
     flex: 0.35;
     margin-top: 1rem;
     pointer-events: none;
+} */
+
+/* .education-image > img {
+    /* width: 100%;
 }
-
-.education-image > img {
-    width: 100%;
-}
+ */
 
 
-
-@media (min-width: 992px) and (max-width: 1380px) {
+/* @media (min-width: 992px) and (max-width: 1380px) {
 
 }
 
@@ -175,4 +175,4 @@
 
 @media only screen and (device-width: 768px) {
 
-}
+} */ */

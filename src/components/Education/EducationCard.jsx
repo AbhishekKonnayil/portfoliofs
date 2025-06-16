@@ -18,10 +18,15 @@ function EducationCard({ id, institution, course, startYear, endYear }) {
     };
 
     return (
-        <motion.div whileHover={{ scale: 1.02 }}>
+        <motion.div initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
+            viewport={{ once: true, amount: 0.2 }}
+            whileHover={{ scale: 1.02 }}>
+            
             <div
                 key={id}
-                className="education-card"
+                className="flex flex-row items-start justify-start gap-4 h-[140px] p-6 rounded-[20px]  transition-colors duration-200 ease-in-out"
                 style={cardStyle}
                 onMouseEnter={(e) => {
                     e.currentTarget.style.backgroundColor = theme.primary50;
@@ -30,18 +35,19 @@ function EducationCard({ id, institution, course, startYear, endYear }) {
                     e.currentTarget.style.backgroundColor = theme.primary30;
                 }}
             >
-                <div className="educard-img" style={{ backgroundColor: theme.primary }}>
-                    <img
+                <div className="rounded-[50%] w-[55px] h-[55px] flex items-center justify-center shrink-0" style={{ backgroundColor: theme.primary }}>
+                    <img className='w-[40px]'
                         src={theme.type === 'light' ? eduImgBlack : eduImgWhite}
                         alt="Education"
                     />
                 </div>
-                <div className="education-details">
-                    <h6 style={{ color: theme.primary }}>
+                <div className="flex flex-col gap-y-4">
+                    <h6 className='text-sm font-bold' style={{ color: theme.primary }}>
                         {startYear}-{endYear}
                     </h6>
-                    <h4 style={{ color: theme.tertiary }}>{course}</h4>
-                    <h5 style={{ color: theme.tertiary80 }}>{institution}</h5>
+                    <div><h4 className='text-[1.25rem] font-semibold sm:text-[1.125rem] leading-tight ' style={{ color: theme.tertiary }}>{course}</h4>
+                        <h5 className='text-[1.1rem] font-medium sm:text-[1.05rem]' style={{ color: theme.tertiary80 }}>{institution}</h5></div>
+
                 </div>
             </div>
         </motion.div>
