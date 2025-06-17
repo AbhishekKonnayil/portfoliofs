@@ -6,6 +6,7 @@ import './Skills.css'
 import { ThemeContext } from '../../contexts/ThemeContext';
 import { skillsData } from '../../data/skillsData'
 import { skillsImage } from '../../utils/skillsImage'
+import { BiFontFamily } from 'react-icons/bi';
 
 function Skills() {
 
@@ -13,12 +14,12 @@ function Skills() {
 
     const skillBoxStyle = {
         backgroundColor: theme.secondary,
-        boxShadow: `0px 0px 30px ${theme.primary30}`
+        boxShadow: `0px 0px 30px ${theme.primary30}`,
     }
 
     return (
         <div className="skills" style={{backgroundColor: theme.secondary}}>
-            <div className="skillsHeader">
+            <div className="skillsHeader font-exo">
                 <h2 style={{color: theme.primary}}>Skills</h2>
             </div>
             <div className="skillsContainer">
@@ -35,7 +36,7 @@ function Skills() {
                         {skillsData.map((skill, id) => (
                             <div className="skill--box" key={id} style={skillBoxStyle}>
                                 <img src={skillsImage(skill)} alt={skill} />
-                                <h3 style={{color: theme.tertiary}}>
+                                <h3 className='font-exo font-medium'style={{color: theme.tertiary}}>
                                     {skill}
                                 </h3>
                             </div>

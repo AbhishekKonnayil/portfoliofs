@@ -37,6 +37,7 @@ function Contacts() {
     const [errMsg, setErrMsg] = useState('');
 
     const { theme } = useContext(ThemeContext);
+    const [isHovered, setIsHovered] = useState(false)
 
     const handleClose = (event, reason) => {
         if (reason === 'clickaway') {
@@ -46,72 +47,12 @@ function Contacts() {
         setOpen(false);
     };
 
-    const inputStyle = (theme) => ({
-        border: `4px solid ${theme.primary80}`,
-        backgroundColor: theme.secondary,
-        color: theme.tertiary,
-        fontFamily: 'var(--primaryFont)',
-        fontWeight: 500,
-        transition: 'border 0.2s ease-in-out',
-        outline: 'none',
-    });
-    const messageStyle = inputStyle;
-    const labelStyle = (theme) => ({
-        backgroundColor: theme.secondary,
-        color: theme.primary,
-        fontFamily: 'var(--primaryFont)',
-        fontWeight: 600,
-        fontSize: '0.9rem',
-        padding: '0 5px',
-        transform: 'translate(25px, 50%)',
-        display: 'inline-flex',
-    });
-    const socialIconStyle = (theme) => ({
-        width: '45px',
-        height: '45px',
-        borderRadius: '50%',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        fontSize: '21px',
-        backgroundColor: theme.primary,
-        color: theme.secondary,
-        transition: '250ms ease-in-out',
-        cursor: 'pointer',
-        '&:hover': {
-            transform: 'scale(1.1)',
-            color: theme.secondary,
-            backgroundColor: theme.tertiary,
-        },
-    });
-    const detailsIconStyle = (theme) => ({
-        backgroundColor: theme.primary,
-        color: theme.secondary,
-        borderRadius: '50%',
-        width: '45px',
-        height: '45px',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        fontSize: '23px',
-        transition: '250ms ease-in-out',
-        flexShrink: 0,
-        '&:hover': {
-            transform: 'scale(1.1)',
-            color: theme.secondary,
-            backgroundColor: theme.tertiary,
-        },
-    });
-    const submitBtnStyle = (theme) => ({
-        backgroundColor: theme.primary,
-        color: theme.secondary,
-        transition: '250ms ease-in-out',
-        '&:hover': {
-            transform: 'scale(1.08)',
-            color: theme.secondary,
-            backgroundColor: theme.tertiary,
-        },
-    });
+    const inputStyle = 'form-input font-medium outline-none transition-all ease-in-out border duration-200'
+    const messageStyle = 'form-message font-medium outline-none transition-all ease-in-out border duration-200'
+    const labelStyle = 'inline-flex font-semibold text-sm pr-[5px] transform translate-x-[25px] translate-y-[50%]'
+    const socialDataStyle = `w-[45px] h-[45px] rounded-[50%] flex items-center justify-center text-[21px] transition-all duration-200 ease-in-out cursor-pointer hover:scale-110 `
+    const detailsIconStyle = 'rounded-[50%] w-[45px] h-[45px] flex items-center justify-center text-[23px] transition-all duration-200 ease-in-out shrink-0 hover:transform scale-110'
+    const submitBtnStyle = 'transition-colors duration-300 ease-in-out hover:scale-105'
 
 
     const handleContactForm = (e) => {
@@ -151,13 +92,17 @@ function Contacts() {
             id='contacts'
             style={{ backgroundColor: theme.secondary }}
         >
-            <div className='contacts--container'>
+            <div className='contacts--container font-exo font-bold'>
                 <h1 style={{ color: theme.primary }}>Contacts</h1>
                 <div className='contacts-body'>
                     <div className='contacts-form'>
                         <form onSubmit={handleContactForm}>
                             <div className='input-container'>
-                                <label htmlFor='Name'className={labelStyle}>
+                                <label htmlFor='Name' className={labelStyle}
+                                    style={{
+                                        backgroundColor: theme.secondary,
+                                        color: theme.primary,
+                                    }}>
                                     Name
                                 </label>
                                 <input
@@ -166,14 +111,22 @@ function Contacts() {
                                     onChange={(e) => setName(e.target.value)}
                                     type='text'
                                     name='Name'
-                                    className={`form-input ${inputStyle}`}
+                                    className={inputStyle}
+                                    style={{
+                                        borderColor: theme.primary,
+                                        backgroundColor: theme.secondary,
+                                        color: theme.tertiary,
+                                    }}
                                 />
                             </div>
                             <div className='input-container'>
                                 <label
                                     htmlFor='Email'
                                     className={labelStyle}
-                                >
+                                    style={{
+                                        backgroundColor: theme.secondary,
+                                        color: theme.primary,
+                                    }}>
                                     Email
                                 </label>
                                 <input
@@ -182,14 +135,23 @@ function Contacts() {
                                     onChange={(e) => setEmail(e.target.value)}
                                     type='email'
                                     name='Email'
-                                    className={`form-input ${inputStyle}`}
+                                    className={inputStyle}
+                                    style={{
+                                        borderColor: theme.primary,
+                                        backgroundColor: theme.secondary,
+                                        color: theme.tertiary,
+                                    }}
                                 />
                             </div>
                             <div className='input-container'>
                                 <label
                                     htmlFor='Message'
                                     className={labelStyle}
-                                >
+                                    style={{
+                                        backgroundColor: theme.secondary,
+                                        color: theme.primary,
+                                    }}>
+
                                     Message
                                 </label>
                                 <textarea
@@ -198,14 +160,25 @@ function Contacts() {
                                     onChange={(e) => setMessage(e.target.value)}
                                     type='text'
                                     name='Message'
-                                    className={`form-message ${messageStyle}`}
+                                    className={messageStyle}
+                                    style={{
+                                        borderColor: theme.primary,
+                                        backgroundColor: theme.secondary,
+                                        color: theme.tertiary,
+                                    }}
                                 />
                             </div>
 
-                            <div className='submit-btn'>
-                                <button
+                            <div
+                                className='submit-btn'>
+                                <button onMouseEnter={() => setIsHovered(true)}
+                                    onMouseLeave={() => setIsHovered(false)}
                                     type='submit'
                                     className={submitBtnStyle}
+                                    style={{
+                                        backgroundColor: isHovered ? theme.primary : theme.secondary,
+                                        color: isHovered ? theme.secondary : theme.tertiary
+                                    }}
                                 >
                                     <p>{!success ? 'Send' : 'Sent'}</p>
                                     <div className='submit-icon'>
@@ -270,7 +243,11 @@ function Contacts() {
                             href={`mailto:${contactsData.email}`}
                             className='personal-details'
                         >
-                            <div className={detailsIconStyle}>
+                            <div className={detailsIconStyle}
+                                style={{
+                                    color: theme.secondary,
+                                    backgroundColor: theme.primary
+                                }}>
                                 <FiAtSign />
                             </div>
                             <p style={{ color: theme.tertiary }}>
@@ -281,7 +258,11 @@ function Contacts() {
                             href={`tel:${contactsData.phone}`}
                             className='personal-details'
                         >
-                            <div className={detailsIconStyle}>
+                            <div className={detailsIconStyle}
+                                style={{
+                                    color: theme.secondary,
+                                    backgroundColor: theme.primary
+                                }}>
                                 <FiPhone />
                             </div>
                             <p style={{ color: theme.tertiary }}>
@@ -289,7 +270,11 @@ function Contacts() {
                             </p>
                         </a>
                         <div className='personal-details'>
-                            <div className={detailsIconStyle}>
+                            <div className={detailsIconStyle}
+                                style={{
+                                    color: theme.secondary,
+                                    backgroundColor: theme.primary
+                                }}>
                                 <HiOutlineLocationMarker />
                             </div>
                             <p style={{ color: theme.tertiary }}>
@@ -303,7 +288,12 @@ function Contacts() {
                                     href={socialsData.twitter}
                                     target='_blank'
                                     rel='noreferrer'
-                                    className={socialIconStyle}
+                                    className={socialDataStyle}
+                                    style={{
+                                        backgroundColor: theme.primary,
+                                        color: theme.secondary,
+
+                                    }}
                                 >
                                     <FaTwitter aria-label='Twitter' />
                                 </a>
@@ -313,8 +303,14 @@ function Contacts() {
                                     href={socialsData.github}
                                     target='_blank'
                                     rel='noreferrer'
-                                    className={socialIconStyle}
+                                    className={socialDataStyle}
+                                    style={{
+                                        backgroundColor: theme.primary,
+                                        color: theme.secondary,
+
+                                    }}
                                 >
+
                                     <FaGithub aria-label='GitHub' />
                                 </a>
                             )}
@@ -323,8 +319,14 @@ function Contacts() {
                                     href={socialsData.linkedIn}
                                     target='_blank'
                                     rel='noreferrer'
-                                    className={socialIconStyle}
+                                    className={socialDataStyle}
+                                    style={{
+                                        backgroundColor: theme.primary,
+                                        color: theme.secondary,
+
+                                    }}
                                 >
+
                                     <FaLinkedinIn aria-label='LinkedIn' />
                                 </a>
                             )}
@@ -333,8 +335,14 @@ function Contacts() {
                                     href={socialsData.instagram}
                                     target='_blank'
                                     rel='noreferrer'
-                                    className={socialIconStyle}
+                                    className={socialDataStyle}
+                                    style={{
+                                        backgroundColor: theme.primary,
+                                        color: theme.secondary,
+
+                                    }}
                                 >
+
                                     <FaInstagram aria-label='Instagram' />
                                 </a>
                             )}
@@ -343,8 +351,14 @@ function Contacts() {
                                     href={socialsData.medium}
                                     target='_blank'
                                     rel='noreferrer'
-                                    className={socialIconStyle}
+                                    className={socialDataStyle}
+                                    style={{
+                                        backgroundColor: theme.primary,
+                                        color: theme.secondary,
+
+                                    }}
                                 >
+
                                     <FaMediumM aria-label='Medium' />
                                 </a>
                             )}
@@ -353,8 +367,14 @@ function Contacts() {
                                     href={socialsData.blogger}
                                     target='_blank'
                                     rel='noreferrer'
-                                    className={socialIconStyle}
+                                    className={socialDataStyle}
+                                    style={{
+                                        backgroundColor: theme.primary,
+                                        color: theme.secondary,
+
+                                    }}
                                 >
+
                                     <FaBloggerB aria-label='Blogger' />
                                 </a>
                             )}
@@ -363,8 +383,14 @@ function Contacts() {
                                     href={socialsData.youtube}
                                     target='_blank'
                                     rel='noreferrer'
-                                    className={socialIconStyle}
+                                    className={socialDataStyle}
+                                    style={{
+                                        backgroundColor: theme.primary,
+                                        color: theme.secondary,
+
+                                    }}
                                 >
+
                                     <FaYoutube aria-label='YouTube' />
                                 </a>
                             )}
@@ -373,8 +399,14 @@ function Contacts() {
                                     href={socialsData.reddit}
                                     target='_blank'
                                     rel='noreferrer'
-                                    className={socialIconStyle}
+                                    className={socialDataStyle}
+                                    style={{
+                                        backgroundColor: theme.primary,
+                                        color: theme.secondary,
+
+                                    }}
                                 >
+
                                     <FaRedditAlien aria-label='Reddit' />
                                 </a>
                             )}
@@ -383,8 +415,14 @@ function Contacts() {
                                     href={socialsData.stackOverflow}
                                     target='_blank'
                                     rel='noreferrer'
-                                    className={socialIconStyle}
+                                    className={socialDataStyle}
+                                    style={{
+                                        backgroundColor: theme.primary,
+                                        color: theme.secondary,
+
+                                    }}
                                 >
+
                                     <FaStackOverflow aria-label='Stack Overflow' />
                                 </a>
                             )}
@@ -393,8 +431,14 @@ function Contacts() {
                                     href={socialsData.codepen}
                                     target='_blank'
                                     rel='noreferrer'
-                                    className={socialIconStyle}
+                                    className={socialDataStyle}
+                                    style={{
+                                        backgroundColor: theme.primary,
+                                        color: theme.secondary,
+
+                                    }}
                                 >
+
                                     <FaCodepen aria-label='CodePen' />
                                 </a>
                             )}
@@ -403,8 +447,14 @@ function Contacts() {
                                     href={socialsData.gitlab}
                                     target='_blank'
                                     rel='noreferrer'
-                                    className={socialIconStyle}
+                                    className={socialDataStyle}
+                                    style={{
+                                        backgroundColor: theme.primary,
+                                        color: theme.secondary,
+
+                                    }}
                                 >
+
                                     <FaGitlab aria-label='GitLab' />
                                 </a>
                             )}

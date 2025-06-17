@@ -40,7 +40,7 @@ function Experience() {
                 viewport={{ once: true }}
             >
                 <h1
-                    className="text-[3rem] sm:text-[3.5rem] font-serif self-center lg:self-end"
+                    className="text-[3rem] sm:text-[3.5rem] font-exo font-bold self-center lg:self-end"
                     style={{ color: theme.primary }}
                 >
                     Experience

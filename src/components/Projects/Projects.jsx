@@ -53,7 +53,7 @@ function Projects() {
                     id="projects"
                     style={{ backgroundColor: theme.secondary }}
                 >
-                    <div className="projects--header">
+                    <div className="projects--header font-exo font-bold">
                         <h1 style={{ color: theme.primary }}>Projects</h1>
                     </div>
                     <div className="projects--body">

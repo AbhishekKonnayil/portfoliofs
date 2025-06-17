@@ -21,7 +21,7 @@ function Education() {
                 viewport={{ once: true }}
             >
                 <h1
-                    className="text-[3rem] sm:text-[3.5rem] font-serif self-center lg:self-start"
+                    className="text-[3rem] sm:text-[3.5rem] font-bold font-exo self-center lg:self-start"
                     style={{ color: theme.primary }}
                 >
                     Education

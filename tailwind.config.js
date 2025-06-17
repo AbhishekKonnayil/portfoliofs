@@ -2,10 +2,14 @@
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}", // Scan all components for Tailwind classes
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        exo: ['"Exo 2"', 'sans-serif'], // ✔ Correct font name + fallback
+      },
+    },
   },
   plugins: [],
 }
