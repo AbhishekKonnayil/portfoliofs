@@ -12,7 +12,7 @@ export const projectsData = [
     {
         id: 1,
         projectName: 'Storyverse',
-        projectDesc: 'This project aims to build a script writing software integrated with AI features to streamline and enhance the creative writing process.',
+        projectDesc: 'In this project, I have integrated Firebase Authentication to enable secure user sign-up and login functionality, and implemented various UI fixes to enhance the overall user interface and improve the user experience.',
         tags: ['React js', 'Tailwind CSS', 'Firestore'],
         code: 'https://github.com/hhhrrrttt222111/developer-portfolio',
         // demo: 'https://github.com/hhhrrrttt222111/developer-portfolio',
@@ -31,7 +31,7 @@ export const projectsData = [
         id: 3,
         projectName: 'Dashboard App',
         projectDesc: 'A frontend-only responsive admin dashboard built with Next.js for dynamic data visualization and styled with Tailwind CSS for consistent UI.',
-        tags: ['Next js','Tailwind CSS'],
+        tags: ['Next js', 'Tailwind CSS'],
         code: 'https://github.com/hhhrrrttt222111/developer-portfolio',
         demo: 'https://github.com/hhhrrrttt222111/developer-portfolio',
         image: three

@@ -269,7 +269,7 @@ function Contacts() {
                                 {contactsData.phone}
                             </p>
                         </a>
-                        <div className='personal-details'>
+                        {/* <div className='personal-details'>
                             <div className={detailsIconStyle}
                                 style={{
                                     color: theme.secondary,
@@ -280,7 +280,7 @@ function Contacts() {
                             <p style={{ color: theme.tertiary }}>
                                 {contactsData.address}
                             </p>
-                        </div>
+                        </div> */}
 
                         <div className='socialmedia-icons'>
                             {socialsData.twitter && (
