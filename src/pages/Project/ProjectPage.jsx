@@ -69,54 +69,53 @@ const ProjectPage = () => {
     }))
 
     return (
-        <div className="projectPage" style={{ backgroundColor: theme.secondary }}>
-            <Helmet>
-                <title>{headerData.name} | Projects</title>
-            </Helmet>
+        <> <div className="projectPage-header" style={{ backgroundColor: theme.primary }}>
+            <Link to="/">
+                <HomeIcon themeProp={theme} />
+            </Link>
+            <h1 style={{ color: theme.secondary }}>Projects</h1>
+        </div><div className="projectPage" style={{ backgroundColor: theme.secondary }}>
+                <Helmet>
+                    <title>{headerData.name} | Projects</title>
+                </Helmet>
 
-            <div className="projectPage-header" style={{ backgroundColor: theme.primary }}>
-                <Link to="/">
-                    <HomeIcon themeProp={theme} />
-                </Link>
-                <h1 style={{ color: theme.secondary }}>Projects</h1>
-            </div>
+                <div className="projectPage-container">
+                    <div className="projectPage-search">
+                        <SearchInput
+                            type="text"
+                            value={search}
+                            onChange={(e) => setSearch(e.target.value)}
+                            placeholder="Search project..."
+                            themeProp={theme}
+                        />
+                    </div>
 
-            <div className="projectPage-container">
-                <div className="projectPage-search">
-                    <SearchInput
-                        type="text"
-                        value={search}
-                        onChange={(e) => setSearch(e.target.value)}
-                        placeholder="Search project..."
-                        themeProp={theme}
-                    />
+                    <div className="project-container">
+                        <Grid
+                            className="project-grid"
+                            container
+                            direction="row"
+                            alignItems="center"
+                            justifyContent="center"
+                        >
+                            {filteredArticles.map(project => (
+                                <SingleProject
+                                    theme={theme}
+                                    key={project.id}
+                                    id={project.id}
+                                    name={project.projectName}
+                                    desc={project.projectDesc}
+                                    tags={project.tags}
+                                    code={project.code}
+                                    demo={project.demo}
+                                    image={project.image}
+                                />
+                            ))}
+                        </Grid>
+                    </div>
                 </div>
+            </div></>
 
-                <div className="project-container">
-                    <Grid
-                        className="project-grid"
-                        container
-                        direction="row"
-                        alignItems="center"
-                        justifyContent="center"
-                    >
-                        {filteredArticles.map(project => (
-                            <SingleProject
-                                theme={theme}
-                                key={project.id}
-                                id={project.id}
-                                name={project.projectName}
-                                desc={project.projectDesc}
-                                tags={project.tags}
-                                code={project.code}
-                                demo={project.demo}
-                                image={project.image}
-                            />
-                        ))}
-                    </Grid>
-                </div>
-            </div>
-        </div>
     )
 }
 

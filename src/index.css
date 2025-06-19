@@ -60,3 +60,7 @@ img {
     overflow-x: hidden;
   }
 }
+
+.heading {
+  @apply pb-8 pt-8 font-bold text-3xl;
+}

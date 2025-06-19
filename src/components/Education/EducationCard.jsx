@@ -26,7 +26,7 @@ function EducationCard({ id, institution, course, startYear, endYear }) {
             
             <div
                 key={id}
-                className="flex flex-row items-start justify-start gap-4 h-[140px] p-6 rounded-[20px]  transition-colors duration-200 ease-in-out"
+                className="flex flex-row items-start justify-start gap-4 h-[200px] p-6 rounded-[20px] xs:h-[180px] sm:h-[140px] transition-colors duration-200 ease-in-out"
                 style={cardStyle}
                 onMouseEnter={(e) => {
                     e.currentTarget.style.backgroundColor = theme.primary50;

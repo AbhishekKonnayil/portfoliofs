@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        xs: '480px'
+      },
       fontFamily: {
         exo: ['"Exo 2"', 'sans-serif'], // ✔ Correct font name + fallback
       },

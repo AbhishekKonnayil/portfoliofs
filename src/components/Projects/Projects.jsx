@@ -49,13 +49,13 @@ function Projects() {
         <>
             {projectsData.length > 0 && (
                 <div
-                    className="projects"
+                    className="flex flex-col items-start justify-start overflow-x-hidden"
                     id="projects"
                     style={{ backgroundColor: theme.secondary }}
                 >
-                    <div className="projects--header font-exo font-bold">
-                        <h1 style={{ color: theme.primary }}>Projects</h1>
-                    </div>
+
+                    <h1 className='heading' style={{ color: theme.primary }}>Projects</h1>
+
                     <div className="projects--body">
                         <div className="projects--bodyContainer">
                             {projectsData.slice(0, 3).map((project) => (
