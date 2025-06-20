@@ -18,11 +18,7 @@ function Footer() {
     return (
         <div className="footer" style={{backgroundColor: theme.secondary}}>
             <p style={{color: theme.tertiary}}>
-                Made with  
-                <span style={{color: theme.primary, margin: '0 0.5rem -1rem 0.5rem'}}>
-                    ❤
-                </span>
-                 by {shortname(headerData.name)}
+                &copy; {new Date().getFullYear()} {headerData.name}. Built with ❤️ using React Js & Tailwind CSS.
             </p>
         </div>
     )

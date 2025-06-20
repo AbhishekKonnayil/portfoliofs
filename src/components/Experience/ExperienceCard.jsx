@@ -52,8 +52,8 @@ export function ExperienceCard({ id, company, jobtitle, startYear, endYear }) {
                     <h6 className="text-sm font-bold" style={{ color: theme.primary }}>
                         {startYear}-{endYear}
                     </h6>
-                    <div> <h4 className=' text-[1.25rem] font-semibold sm:text-[1.125rem] leading-tight' style={{ color: theme.tertiary }}>{jobtitle}</h4>
-                        <h5 className='text-[1.1rem] font-medium sm:text-[1.05rem]' style={{ color: theme.tertiary80 }}>{company}</h5></div>
+                    <div> <h4 className=' text-[1.25rem] font-semibold sm:text-[1.125rem] leading-tight' style={{ color: theme.primary80 }}>{jobtitle}</h4>
+                        <h5 className='text-[1.1rem] font-medium sm:text-[1.05rem]' style={{ color: theme.primary80 }}>{company}</h5></div>
                 </div>
             </div>
         </motion.div>

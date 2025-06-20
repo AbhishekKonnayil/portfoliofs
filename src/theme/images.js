@@ -14,6 +14,8 @@ import redThemeboy from '../assets/svg/about/redTheme-boy.svg'
 import redThemegirl from '../assets/svg/about/redTheme-girl.svg'
 import yellowThemeboy from '../assets/svg/about/yellowTheme-boy.svg'
 import yellowThemegirl from '../assets/svg/about/yellowTheme-girl.svg'
+import coolMinimalBoy from '@/assets/svg/about/coolMinimal-boy.svg'
+import aboutTheme from '@/assets/svg/about/aboutTheme.svg'
 
 import eduBlue from '../assets/svg/education/eduBlue.svg'
 import eduGreen from '../assets/svg/education/eduGreen.svg'
@@ -23,6 +25,7 @@ import eduPink from '../assets/svg/education/eduPink.svg'
 import eduPurple from '../assets/svg/education/eduPurple.svg'
 import eduRed from '../assets/svg/education/eduRed.svg'
 import eduYellow from '../assets/svg/education/eduYellow.svg'
+import educationTheme from '@/assets/svg/education/education-theme.svg'
 
 import expBlue from '../assets/svg/experience/expBlue.svg'
 import expGreen from '../assets/svg/experience/expGreen.svg'
@@ -32,6 +35,7 @@ import expPink from '../assets/svg/experience/expPink.svg'
 import expPurple from '../assets/svg/experience/expPurple.svg'
 import expRed from '../assets/svg/experience/expRed.svg'
 import expYellow from '../assets/svg/experience/expYellow.svg'
+import experienceTheme from '@/assets/svg/experience/experienceTheme.svg'
 
 import contactsBlue from '../assets/svg/contacts/contactsBlue.svg'
 import contactsGreen from '../assets/svg/contacts/contactsGreen.svg'
@@ -41,12 +45,14 @@ import contactsPink from '../assets/svg/contacts/contactsPink.svg'
 import contactsPurple from '../assets/svg/contacts/contactsPurple.svg'
 import contactsRed from '../assets/svg/contacts/contactsRed.svg'
 import contactsYellow from '../assets/svg/contacts/contactsYellow.svg'
+import contactsCoolMinimal from '@/assets/svg/contacts/contactsCustomCoolMinimal.svg'
 
 
-export { 
-    blueThemegirl, blueThemeboy, bwThemeboy, bwThemegirl, greenThemeboy, greenThemegirl, orangeThemeboy, 
+
+export {
+    blueThemegirl, blueThemeboy, bwThemeboy, bwThemegirl, greenThemeboy, greenThemegirl, orangeThemeboy,
     orangeThemegirl, pinkThemeboy, pinkThemegirl, purpleThemeboy, purpleThemegirl, redThemeboy, redThemegirl,
-    yellowThemeboy,yellowThemegirl,eduBlue,eduBlack,eduGreen,eduOrange,eduPink,eduPurple,eduRed,eduYellow,
-    expBlue,expBlack,expGreen,expOrange,expPink,expPurple,expRed,expYellow,contactsBlue,contactsBlack,
-    contactsGreen,contactsOrange,contactsPink,contactsPurple,contactsRed,contactsYellow
+    yellowThemeboy, yellowThemegirl,aboutTheme, eduBlue, eduBlack, eduGreen, eduOrange, eduPink, eduPurple, eduRed, eduYellow,educationTheme,
+    expBlue, expBlack, expGreen, expOrange, expPink, expPurple, expRed, expYellow,experienceTheme, contactsBlue, contactsBlack,
+    contactsGreen, contactsOrange, contactsPink, contactsPurple, contactsRed, contactsYellow, contactsCoolMinimal, coolMinimalBoy
 }

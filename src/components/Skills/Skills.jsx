@@ -20,11 +20,11 @@ function Skills() {
     return (
         <div className="flex flex-col" style={{ backgroundColor: theme.secondary }}>
             <h2 className='heading' style={{ color: theme.primary }}>Skills</h2>
-            <div className="w-full items-center justify-start ">
+            <div className="w-full items-center justify-start overflow-x-hidden ">
                 <Swiper
                     modules={[Autoplay]}
                     spaceBetween={50}
-                    slidesPerView='auto'
+                    slidesPerView="auto"
                     loop={true}
                     autoplay={{
                         delay: 0,
@@ -35,22 +35,24 @@ function Skills() {
                     grabCursor={true}
                 >
                     {skillsData.map((skill, id) => (
-                        <SwiperSlide className='!w-auto ' key={id}>
-                            <div
-                                className="group w-[160px] h-[160px] mt-4 rounded-[10px] flex flex-col items-center justify-center  
-                                    border border-[#E9AD35] transition-all duration-300 relative
-                                            hover:scale-105 hover:shadow-xl cursor-pointer">
-                                <img className="h-[50px]" src={skillsImage(skill)} alt={skill} />
-                                <h3
-                                    className="font-exo font-medium transition-colors duration-300 group-hover:text-[#E9AD35]"
-                                    style={{ color: theme.tertiary }}
+                        <SwiperSlide key={id} className="!w-auto">
+                            {/* Padded wrapper to prevent clipping */}
+                            <div className="p-2"> {/* or p-3 if more room is needed */}
+                                <div
+                                    className="group w-[160px] h-[160px] rounded-[10px] flex flex-col items-center justify-center  
+          border border-[#88D9CF] transition-all duration-300 relative 
+          hover:scale-105 active:scale-105 hover:shadow-xl cursor-pointer z-10"
                                 >
-                                    {skill}
-                                </h3>
+                                    <img className="h-[50px]" src={skillsImage(skill)} alt={skill} />
+                                    <h3 className="font-exo font-medium transition-colors duration-300 text-white group-hover:text-[#88D9CF]">
+                                        {skill}
+                                    </h3>
+                                </div>
                             </div>
                         </SwiperSlide>
                     ))}
                 </Swiper>
+
             </div>
         </div >
     )

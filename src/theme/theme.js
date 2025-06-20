@@ -4,7 +4,10 @@ import {
     orangeThemegirl, pinkThemeboy, pinkThemegirl, purpleThemeboy, purpleThemegirl, redThemeboy, redThemegirl, yellowThemeboy,
     yellowThemegirl, eduBlack, eduBlue, eduGreen, eduOrange, eduPink, eduPurple, eduRed, eduYellow, expBlack, expBlue, expGreen, expOrange,
     expPink, expPurple, expRed, expYellow, contactsBlack, contactsBlue, contactsGreen, contactsOrange, contactsPink, contactsPurple,
-    contactsRed, contactsYellow
+    contactsRed, contactsYellow, contactsCoolMinimal, coolMinimalBoy,
+    educationTheme,
+    experienceTheme,
+    aboutTheme
 } from './images'
 
 
@@ -388,5 +391,47 @@ export const softNeumorphism = {
     tertiary50: '#6B728080',
 
 }
+export const monoChromaticMinimalism = {
+
+    type: 'dark',
+    primary: '#E0E0E0',
+    primary400: '#E0E0E0',      // Same base tone since it's monochrome
+    primary600: '#B0B0B0',      // Slightly darker variation
+    primary80: '#E0E0E0cc',
+    primary50: '#E0E0E080',
+    primary30: '#E0E0E04d',
+    secondary: '#121212',
+    secondary70: '#121212b3',
+    secondary50: '#12121280',
+    tertiary: '#2C2C2C',        // Slight contrast within monochrome
+    tertiary80: '#2C2C2Ccc',
+    tertiary70: '#2C2C2Cb3',
+    tertiary50: '#2C2C2C80',
+};
+
+export const customCoolMinimal = {
+    type: 'light',
+    primary: '#E0FBFC',
+    primary400: '#C2DFE3',
+    primary600: '#9DB4C0',
+    primary80: '#E0FBFCcc',
+    primary50: '#E0FBFC80',
+    primary30: '#E0FBFC4d',
+
+    secondary: '#253237',
+    secondary70: '#253237b3',
+    secondary50: '#25323780',
+
+    tertiary: '#5C6B73',
+    tertiary80: '#5C6B73cc',
+    tertiary70: '#5C6B73b3',
+    tertiary50: '#5C6B7380',
+    aboutimg1: aboutTheme,
+    aboutimg2: yellowThemegirl,
+    eduimg: educationTheme,
+    expimg: experienceTheme,
+    contactsimg: contactsCoolMinimal
+};
+
 
 

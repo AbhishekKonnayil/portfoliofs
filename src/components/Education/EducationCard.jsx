@@ -23,10 +23,10 @@ function EducationCard({ id, institution, course, startYear, endYear }) {
             transition={{ duration: 0.6, ease: 'easeOut' }}
             viewport={{ once: true, amount: 0.2 }}
             whileHover={{ scale: 1.02 }}>
-            
+
             <div
                 key={id}
-                className="flex flex-row items-start justify-start gap-4 h-[200px] p-6 rounded-[20px] xs:h-[180px] sm:h-[140px] transition-colors duration-200 ease-in-out"
+                className="flex flex-row items-start justify-start w-full gap-4 h-[200px] p-6 rounded-[20px] xs:h-[180px] sm:h-[140px] transition-colors duration-200 ease-in-out"
                 style={cardStyle}
                 onMouseEnter={(e) => {
                     e.currentTarget.style.backgroundColor = theme.primary50;
@@ -45,8 +45,8 @@ function EducationCard({ id, institution, course, startYear, endYear }) {
                     <h6 className='text-sm font-bold' style={{ color: theme.primary }}>
                         {startYear}-{endYear}
                     </h6>
-                    <div><h4 className='text-[1.25rem] font-semibold sm:text-[1.125rem] leading-tight ' style={{ color: theme.tertiary }}>{course}</h4>
-                        <h5 className='text-[1.1rem] font-medium sm:text-[1.05rem]' style={{ color: theme.tertiary80 }}>{institution}</h5></div>
+                    <div><h4 className='text-[1.25rem] font-semibold sm:text-[1.125rem] leading-tight ' style={{ color: theme.primary80 }}>{course}</h4>
+                        <h5 className='text-[1.1rem] font-medium sm:text-[1.05rem]' style={{ color: theme.primary80 }}>{institution}</h5></div>
 
                 </div>
             </div>

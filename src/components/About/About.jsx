@@ -24,12 +24,12 @@ function About() {
                         <div className="mt-10 pointer-events-none">
 
                             <img className='w-[380px] flex-[0.5]'
-                                src={aboutData.image === 1 ? theme.aboutimg1 : theme.aboutimg2}
+                                src={theme.aboutimg1}
                                 alt=""
                             />
                         </div>
                         <div className="flex flex-col items-start justify-evenly flex-[0.5] w-full h-fit">
-                            <p style={{ color: theme.tertiary80 }}>{aboutData.description2}</p>
+                            <p style={{ color: theme.primary80 }}>{aboutData.description2}</p>
                         </div>
 
                     </div></div></div>

@@ -62,5 +62,5 @@ img {
 }
 
 .heading {
-  @apply pb-8 pt-8 font-bold text-[3.25rem] text-center ;
+  @apply pb-8 pt-40 font-bold text-[3.25rem] text-center  ;
 }

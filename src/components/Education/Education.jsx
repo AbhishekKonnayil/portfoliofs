@@ -18,9 +18,16 @@ function Education() {
                 style={{ color: theme.primary }}
             >
                 Education
-            </h1> <div className="w-full flex flex-col lg:flex-row items-center justify-between gap-x-4 px-10 text-[#3EC337B3]" id="resume" style={{ backgroundColor: theme.secondary }}>
+            </h1>
+                <div className=" w-full flex flex-col lg:flex-row items-center justify-between px-6 sm:px-10 gap-6">
+
+
+
+                    {/* left side */}
+
 
                     <motion.div
+                    className='w-full  flex flex-col justify-center items-start gap-6'
                         initial={{ opacity: 0, y: 60 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.7 }}
@@ -28,7 +35,7 @@ function Education() {
                     >
 
 
-                        <div className="w-full flex flex-col gap-4">
+                        <div className="w-full">
                             {educationData.map((edu) => (
                                 <EducationCard
                                     key={edu.id}
@@ -42,18 +49,21 @@ function Education() {
                             ))}
                         </div>
                     </motion.div>
+
+                    {/* right side image */}
                     <motion.div
-                        // className=" box-border p-4 flex mt-4 pointer-events-none"
+                        className=" hidden lg:flex w-full justify-center items-center mt-10 lg:mt-0"
                         initial={{ opacity: 0, x: -60 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6 }}
                         viewport={{ once: true }}
                     >
-                        <img
+                        <div className='max-w-md w-full pointer-events-none'> <img
                             src={theme.eduimg}
                             alt="Education"
-                            className="hidden lg:block lg:w-full"
                         />
+                        </div>
+
                     </motion.div>
                 </div>
             </div>
