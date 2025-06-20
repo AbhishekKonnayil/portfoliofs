@@ -88,13 +88,12 @@ function Contacts() {
 
     return (
         <>
-
-            <div
+            <div style={{ backgroundColor: theme.secondary }}><h1 style={{ color: theme.primary }} className='heading'>Contacts</h1><div
                 className='flex flex-col items-start justify-start relative border-none'
                 id='contacts'
-                style={{ backgroundColor: theme.secondary }}
+
             >
-                <h1 style={{ color: theme.primary }} className='heading'>Contacts</h1>
+
                 <div className='flex flex-col items-start justify-start px-8 pt-8 pb-12 w-full'>
                     <div className='contacts-body'>
                         <div className='contacts-form'>
@@ -469,7 +468,9 @@ function Contacts() {
                     alt='contacts'
                     className='contacts--img'
                 />
-            </div>
+            </div></div>
+
+
         </>
 
     );

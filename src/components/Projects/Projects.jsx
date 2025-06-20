@@ -47,45 +47,45 @@ function Projects() {
 
     return (
         <>
-            {projectsData.length > 0 && (
-                <div
-                    className="flex flex-col items-start justify-start overflow-x-hidden"
-                    id="projects"
-                    style={{ backgroundColor: theme.secondary }}
-                >
+            <div style={{ backgroundColor: theme.secondary }}><h1 className='heading' style={{ color: theme.primary }}>Projects</h1><div
+                className="flex flex-col items-start justify-start overflow-x-hidden"
+                id="projects"
 
-                    <h1 className='heading' style={{ color: theme.primary }}>Projects</h1>
+            >
 
-                    <div className="projects--body">
-                        <div className="projects--bodyContainer">
-                            {projectsData.slice(0, 3).map((project) => (
-                                <SingleProject
-                                    theme={theme}
-                                    key={project.id}
-                                    id={project.id}
-                                    name={project.projectName}
-                                    desc={project.projectDesc}
-                                    tags={project.tags}
-                                    code={project.code}
-                                    demo={project.demo}
-                                    image={project.image}
-                                />
-                            ))}
-                        </div>
 
-                        {projectsData.length > 3 && (
-                            <div className="projects--viewAll">
-                                <NavLink to="/projects">
-                                    <ViewAllButton>
-                                        View All
-                                        <ViewArrow />
-                                    </ViewAllButton>
-                                </NavLink>
-                            </div>
-                        )}
+
+                <div className="projects--body">
+                    <div className="projects--bodyContainer">
+                        {projectsData.slice(0, 3).map((project) => (
+                            <SingleProject
+                                theme={theme}
+                                key={project.id}
+                                id={project.id}
+                                name={project.projectName}
+                                desc={project.projectDesc}
+                                tags={project.tags}
+                                code={project.code}
+                                demo={project.demo}
+                                image={project.image}
+                            />
+                        ))}
                     </div>
+
+                    {projectsData.length > 3 && (
+                        <div className="projects--viewAll">
+                            <NavLink to="/projects">
+                                <ViewAllButton>
+                                    View All
+                                    <ViewArrow />
+                                </ViewAllButton>
+                            </NavLink>
+                        </div>
+                    )}
                 </div>
-            )}
+            </div>
+            </div>
+
         </>
     );
 }

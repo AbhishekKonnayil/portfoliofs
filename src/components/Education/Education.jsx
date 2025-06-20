@@ -18,7 +18,7 @@ function Education() {
                 style={{ color: theme.primary }}
             >
                 Education
-            </h1> <div className="w-full flex flex-col lg:flex-row items-center justify-between  px-10 text-[#3EC337B3]" id="resume" style={{ backgroundColor: theme.secondary }}>
+            </h1> <div className="w-full flex flex-col lg:flex-row items-center justify-between gap-x-4 px-10 text-[#3EC337B3]" id="resume" style={{ backgroundColor: theme.secondary }}>
 
                     <motion.div
                         initial={{ opacity: 0, y: 60 }}
