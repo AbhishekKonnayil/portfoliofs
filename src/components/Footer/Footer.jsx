@@ -16,9 +16,9 @@ function Footer() {
     const { theme }  = useContext(ThemeContext)
 
     return (
-        <div className="footer" style={{backgroundColor: theme.secondary}}>
+        <div className="p-8 text-center" style={{backgroundColor: theme.secondary}}>
             <p style={{color: theme.tertiary}}>
-                &copy; {new Date().getFullYear()} {headerData.name}. Built with ❤️ using React Js & Tailwind CSS.
+               &copy; {new Date().getFullYear()} {headerData.name}.<br/> Built with React.js and Tailwind CSS.
             </p>
         </div>
     )

@@ -11,7 +11,7 @@ function About() {
     const { theme } = useContext(ThemeContext);
     return (
         <>
-            <div style={{ backgroundColor: theme.secondary }}><div id="about" >
+            <section style={{ backgroundColor: theme.secondary }}><div id="about" >
                 <div className="top-[50px] left-[50px] transform-translate-x-[-50%] h-[50px] w-full flex items-center justify-between px-4 ">
                     <div className="w-[10px] h-[10px] rounded-[50%]" style={{ backgroundColor: theme.primary }}></div>
                     <div className="w-[10px] h-[10px] rounded-[50%]" style={{ backgroundColor: theme.primary }}></div>
@@ -32,7 +32,7 @@ function About() {
                             <p style={{ color: theme.primary80 }}>{aboutData.description2}</p>
                         </div>
 
-                    </div></div></div>
+                    </div></div></section>
 
         </>
 

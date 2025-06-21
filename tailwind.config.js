@@ -7,10 +7,10 @@ export default {
   theme: {
     extend: {
       screens: {
-        xs: '480px'
+        xs: '400px',
       },
       fontFamily: {
-        exo: ['"Exo 2"', 'sans-serif'], // ✔ Correct font name + fallback
+        exo: ['"Exo 2"', 'sans-serif'],
       },
     },
   },

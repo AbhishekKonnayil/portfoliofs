@@ -41,10 +41,10 @@ function Skills() {
                                 <div
                                     className="group w-[160px] h-[160px] rounded-[10px] flex flex-col items-center justify-center  
           border border-[#88D9CF] transition-all duration-300 relative 
-          hover:scale-105 active:scale-105 hover:shadow-xl cursor-pointer z-10"
+          hover:scale-105 active:scale-105 hover:shadow-xl cursor-pointer z-10  "
                                 >
                                     <img className="h-[50px]" src={skillsImage(skill)} alt={skill} />
-                                    <h3 className="font-exo font-medium transition-colors duration-300 text-white group-hover:text-[#88D9CF]">
+                                    <h3 className="font-exo font-medium transition-colors duration-300 text-white group-hover:text-[#88D9CF] group-active:text-[#88D9CF] text-[1.2rem] mt-2">
                                         {skill}
                                     </h3>
                                 </div>
